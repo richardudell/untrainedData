@@ -122,12 +122,13 @@
       const docId = document.getElementById('docId').value;
       const userId = document.getElementById('userId').value;
 
-      const response = await fetch(`https://api.lucid.co/documents/${docId}', {
+      const response = await fetch(`https://api.lucid.co/documents/${docId}/shares/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
           'Lucid-Api-Version': '1',
-          'Accept': 'application/json'
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({role: "view"})
       });
