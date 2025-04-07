@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lucid API Test – Untrained Data</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      max-width: 700px;
+      background-color: #fdfdfd;
+      color: #111;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Connect to Lucid</h1>
+  <p>This tool uses OAuth2 to authenticate with Lucid Software and test REST API calls.</p>
+  <button id="authBtn">Connect to Lucid</button>
+  <div id="output"></div>
+
+  <script>
+    const clientId = 'YOUR_CLIENT_ID'; // Replace with your Lucid app's client ID
+    const redirectUri = window.location.origin + window.location.pathname;
+    const authEndpoint = 'https://lucid.app/oauth2/authorize';
+    const tokenEndpoint = 'https://api.lucid.co/oauth2/token';
+
+    document.getElementById('authBtn').onclick = () => {
+      const authUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=read:documents`;
+      window.location.href = authUrl;
+    };
+
+    // Check if access_token is in URL
+    const hash = window.location.hash;
+    if (hash.includes('access_token')) {
+      const params = new URLSearchParams(hash.slice(1));
+      const accessToken = params.get('access_token');
+      document.getElementById('authBtn').style.display = 'none';
+
+      fetch('https://api.lucidchart.com/v1/documents', {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('output').innerHTML =
+          `<h2>Document List</h2><pre>${JSON.stringify(data, null, 2)}</pre>`;
+      })
+      .catch(err => {
+        document.getElementById('output').innerText = 'API call failed: ' + err;
+      });
+    }
+  </script>
+</body>
+</html>
