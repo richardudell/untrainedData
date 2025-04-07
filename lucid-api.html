@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lucid API OAuth2 Playground</title>
+  <title>Lucid API OAuth2 Playground – Get User</title>
   <style>
     body {
       font-family: Georgia, serif;
@@ -73,8 +73,8 @@
 
   <div class="section">
     <h2>Make a Test API Call</h2>
-    <label for="userId">User ID:</label>
-    <input type="text" id="userId" placeholder="Enter Lucid user ID"/>
+    <label for="userId">Lucid User ID:</label>
+    <input type="text" id="userId" placeholder="Enter a Lucid user ID"/>
 
     <button onclick="getUser()">Get User Info</button>
 
@@ -87,7 +87,7 @@
     function startAuth() {
       const clientId = document.getElementById('clientId').value;
       const redirectUri = document.getElementById('redirectUri').value;
-      const scope = "scope=lucidchart.document.app.folder+offline_access";
+      const scope = "scope=account.user:readonly+offline_access";
       const authUrl = `https://lucid.app/oauth2/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&${scope}`;
       document.getElementById('authUrl').innerHTML = `<a href="${authUrl}" target="_blank">Click here to authorize with Lucid</a>`;
     }
