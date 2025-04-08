@@ -5,40 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Untrained Data</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
   <style>
     body {
       font-family: Georgia, serif;
-      margin: 0;
-      padding: 0 1rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
       max-width: 700px;
-      margin: auto;
       background-color: #fdfdfd;
       color: #111;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
-      padding: 2rem 0;
+      padding: 2rem 0 1rem;
       text-align: center;
       border-bottom: 1px solid #ddd;
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin: 0;
+      font-size: 2.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 0.75rem;
     }
 
     nav {
       margin-top: 0.5rem;
+      font-family: sans-serif;
     }
 
     nav a {
-      margin: 0 0.5rem;
+      margin: 0 0.6rem;
       text-decoration: none;
       color: #444;
       font-size: 0.95rem;
@@ -49,89 +56,174 @@
     }
 
     section {
-      margin: 2rem 0;
+      margin: 2.5rem 0;
     }
 
-    article h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
+    .essay-card {
+      background-color: #f5f5f5;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    article p {
-      margin: 0.5rem 0 1rem;
+    .essay-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem 0;
+    .meta {
       font-size: 0.85rem;
-      color: #777;
-      border-top: 1px solid #eee;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .essay-card p {
+      margin: 0.4rem 0 0.6rem;
+    }
+
+    .prompt-card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-left: 4px solid #33667A;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+    }
+
+    .prompt-card h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .prompt-card ul {
+      padding-left: 1.25rem;
+    }
+
+    .prompt-card li {
+      margin-bottom: 0.5rem;
     }
 
     a {
-      color: #0077cc;
+      color: #33667A;
+      text-decoration: none;
+      transition: all 0.2s ease;
     }
 
     a:hover {
       color: #005999;
+      background-color: #eef5fa;
+      border-radius: 3px;
+      padding: 0 0.2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 0;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid #eee;
+      font-family: sans-serif;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Untrained Data</h1>
+    <div class="tagline">Learning to live and build with AI. And everything that means.</div>
     <nav>
-        <a href="#about">About</a>
       <a href="#essays">Essays</a>
-
+      <a href="#prompts">Prompts</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section id="essays">
-    <article>
-        <h2>Did AI Write This?</h2>
-        <p>Unpacking the Question. </p>
-        <p>Read Essay: <a href="did-ai-write-this.html">Did AI Write This?</a></p>
-      </article>
-    
-    <article>
+    <h2>Here’s What I’ve Been Thinking</h2>
+
+    <div class="essay-card">
+      <h2>HWIL: We’re Test Driving the Future with the Headlights Off</h2>
+      <div class="meta">Published April 8, 2025 • ~4 min read</div>
+      <p>This week, I sat in on a high-stakes internal conversation about AI implementation. <em>Here's what I learned.</em></p>
+      <p><a href="hwil-first-post-were-test-driving-with-the-headlights-off.html">Read Essay →</a></p>
+    </div>
+
+    <div class="essay-card">
+      <h2>Did AI Write This?</h2>
+      <div class="meta">Published April, 7 2025 • ~4 min read</div>
+      <p>Unpacking the Question.</p>
+      <p><a href="did-ai-write-this.html">Read Essay →</a></p>
+    </div>
+
+    <div class="essay-card">
       <h2>I Don’t Want AI to Think for Me</h2>
+      <div class="meta">Published April 7, 2025 • ~6 min read</div>
       <p>Claude's "learning mode" invites a slower, more deliberate use of AI — one that might reshape how we think about education, agency, and the internet itself.</p>
-      <p>Read Essay: <a href="i-dont-want-ai-to-think-for-me.html">I Don’t Want AI to Think for Me</a></p>
-    </article>
+      <p><a href="i-dont-want-ai-to-think-for-me.html">Read Essay →</a></p>
+    </div>
 
-    <article>
+    <div class="essay-card">
       <h2>We Are All Untrained Data</h2>
+      <div class="meta">Published April 7, 2025 • ~3 min read</div>
       <p>Pretty much the idea for this site.</p>
-      <p>Read Essay: <a href="we-are-all-untrained-data.html">We Are All Untrained Data</a></p>
-    </article>
+      <p><a href="we-are-all-untrained-data.html">Read Essay →</a></p>
+    </div>
+  </section>
 
+  <section id="prompts">
+    <h2>Reflection Prompts</h2>
 
+    <div class="prompt-card">
+      <h3>HWIL: We’re Test Driving the Future with the Headlights Off</h3>
+      <ul>
+        <li><strong>Human Prompt:</strong> Where do you feel uncertain but also ready to lead?</li>
+        <li><strong>Human Prompt:</strong> What mental models help you navigate fast-moving decisions?</li>
+        <li><strong>Machine Prompt:</strong> You are an AI consultant helping a team evaluate multiple tools with incomplete data. Help us model tradeoffs, anticipate change, and align on long-term thinking.</li>
+      </ul>
+    </div>
+
+    <div class="prompt-card">
+      <h3>Did AI Write This?</h3>
+      <ul>
+        <li><strong>Human Prompt:</strong> What signals do you personally use to spot AI-generated content?</li>
+        <li><strong>Human Prompt:</strong> What do you think it means for something to be "authentic"?</li>
+        <li><strong>Machine Prompt:</strong> Pretend you are an AI ethics teacher. Create a test that challenges students to explain what makes a piece of writing feel human.</li>
+      </ul>
+    </div>
+
+    <div class="prompt-card">
+      <h3>I Don’t Want AI to Think for Me</h3>
+      <ul>
+        <li><strong>Human Prompt:</strong> Have you ever felt yourself learning *with* an AI instead of just using it?</li>
+        <li><strong>Human Prompt:</strong> What habits might change if you treated AI like a learning partner?</li>
+        <li><strong>Machine Prompt:</strong> Act like a Socratic tutor. Ask me 5 questions that would help me reflect on a topic I’m struggling to understand.</li>
+      </ul>
+    </div>
+
+    <div class="prompt-card">
+      <h3>We Are All Untrained Data</h3>
+      <ul>
+        <li><strong>Human Prompt:</strong> What part of you feels "untrained" in the best way?</li>
+        <li><strong>Human Prompt:</strong> What insight have you had lately that didn’t come from learning — it just came from living?</li>
+        <li><strong>Machine Prompt:</strong> You are a curious AI with no training. Ask me questions that reveal who I am based only on intuition and hunches.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="about">
-    <h2>About</h2>
+    <h2>About Untrained Data</h2>
+
+    <h3>About</h3>
     <p><strong>Untrained Data</strong> is a newsletter, journal, and conversation space for people learning to live and build with AI. Written by Richard Udell, it blends tech commentary, interviews, and personal stories from the edge of what's next.</p>
-  </section>    
 
-
-  <section id="philosophy">
-    <h2>Philosophy</h2>
+    <h3>Philosophy</h3>
     <p><strong>Untrained Data</strong> is built with help from large language models — including the site itself and much of the writing. But the ideas, direction, and edits are mine.</p>
-  
     <p>This project is about using AI as a tool, not a replacement. I use models to speed up drafting, explore ideas, and get past blank pages. But I stay in the loop — reviewing, rewriting, and shaping every piece myself. If I can’t model human-in-the-loop (<a href="https://en.wikipedia.org/wiki/Human-in-the-loop">HITL</a>) development here, what hope do we have for society?</p>
-  
     <p>The goal isn’t to hand over thinking to AI. It’s to work faster, think deeper, and stay human while using powerful tools. That’s the tension I want to explore — and the reason this site exists.</p>
-  
     <p>That’s also why I say: <em><strong>Trust your GUT — Generative Untrained Transformer.</strong></em></p>
-    
     <p>It’s not a model. It’s a mindset. A reminder that insight doesn’t always come from training data. Sometimes it comes from friction, uncertainty, or a moment that just feels true.</p>
   </section>
-  
-  
-  
 
   <section id="contact">
     <h2>Contact</h2>
@@ -145,6 +237,4 @@
     </a>
   </footer>
 </body>
-</html>   
-
-<!--    comment -->
+</html>
